@@ -3,30 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VidyapurtiGPT - भारत का AI विज्ञान गुरु</title>
+  <title>VidyapurtiGPT • भारत का AI विज्ञान गुरु</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="https://flagcdn.com/in.svg" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>भारत का पहला मुफ्त AI विज्ञान गुरु</h1>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
       <h2>VidyapurtiGPT</h2>
-      <p>Rocket Science, Quantum, Budgeting, NEET, UPSC – 10 साल के बच्चे को भी समझाऊंगा</p>
-    </header>
+    </div>
+    <nav>
+      <a href="#" class="active" data-page="chat"><span>Chat</span></a>
+      <a href="#" data-page="history"><span>History</span></a>
+      <a href="#" data-page="projects"><span>Projects</span></a>
+      <a href="#" data-page="factcheck"><span>Fact-Check</span></a>
+      <a href="#" data-page="about"><span>About</span></a>
+    </nav>
+    <div class="user-section">
+      <div id="google-login">
+        <div id="g_id_onload"
+             data-client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+             data-login_uri="https://vidyapurtigpt.vercel.app"
+             data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin" data-type="standard" data-size="large" data-theme="filled_black" data-text="circle"></div>
+      </div>
+      <div id="user-info" style="display:none;">
+        <img id="user-pic" />
+        <p id="user-name"></p>
+        <button id="logout">Logout</button>
+      </div>
+      <a href="https://rzp.io/l/vidyapurtigptpro" target="_blank" class="pro-btn">Pro ₹50/महीना</a>
+    </div>
+  </div>
 
-    <div id="chat-container">
-      <div id="chat-messages"></div>
-
-      <div class="input-area">
-        <textarea id="user-input" placeholder="कुछ भी पूछो... जैसे: चंद्रयान-3 को रिक्शावाले को समझाओ" rows="1"></textarea>
-        <button id="send-btn">Send</button>
+  <!-- Main Content -->
+  <div class="main">
+    <div id="chat-page" class="page active">
+      <div class="chat-header">
+        <h1>चैट करो • कुछ भी पूछो</h1>
+      </div>
+      <div id="messages"></div>
+      <div class="input-box">
+        <textarea id="input" placeholder="यहाँ टाइप करो... (Enter = भेजें)" rows="1"></textarea>
+        <button id="send">Send</button>
       </div>
     </div>
 
-    <div class="pro-banner">
-      <p>Pro Version (₹50/महीना) – Faster + Voice + No Limits</p>
-      <a href="https://rzp.io/l/vidyapurtigpt" target="_blank" class="pro-btn">Pro बनें ₹50</a>
+    <div id="history-page" class="page">History Page (Jald aayega)</div>
+    <div id="projects-page" class="page">Projects Page (Jald aayega)</div>
+    <div id="check-page" class="page">Fact-Check Tool (Jald aayega)</div>
+    <div id="about-page" class="page">
+      <h1>About VidyapurtiGPT</h1>
+      <p>भारत का पहला 100% मुफ्त AI जो रॉकेट साइंस से लेकर बजट बनाना तक सब कुछ 10 साल के बच्चे को समझा देता है।</p>
     </div>
   </div>
 
